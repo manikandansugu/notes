@@ -103,7 +103,7 @@ app.delete("/api/note/deleteNote", authMiddleware, async (req, res, next) => {
 });
 
 (async () => {
-  mongoose.connect("mongodb://0.0.0.0:27017/Notes").then(() => {
+  mongoose.connect("mongodb://142.171.90.20:27017/Notes").then(() => {
     app.listen(port, () => {
       console.log(`Server is running on port ${port}`);
       console.log("mongoDB  connected");
