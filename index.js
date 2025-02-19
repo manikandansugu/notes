@@ -105,10 +105,14 @@ app.delete("/api/note/deleteNote", authMiddleware, async (req, res, next) => {
 });
 
 (async () => {
-  mongoose.connect("mongodb://142.171.90.20:27017/Notes").then(() => {
-    app.listen(port, () => {
-      console.log(`Server is running on port ${port}`);
-      console.log("mongoDB  connected");
+  mongoose
+    .connect(
+      "mongodb+srv://serverinfomask:lZhf4EsuLXxllcrg@personal.zrtu7.mongodb.net/"
+    )
+    .then(() => {
+      app.listen(port, () => {
+        console.log(`Server is running on port ${port}`);
+        console.log("mongoDB  connected");
+      });
     });
-  });
 })();
